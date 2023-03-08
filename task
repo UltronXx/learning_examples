@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# read file
+# read file name
 read -p "Enter file name: " file
 
 # write "#!/bin/bash" into file
@@ -10,11 +10,12 @@ echo "#!/bin/bash" > $file
 read -p "Write code line: " code_line
 echo "$code_line" >> $file
 
-# add executory permission
+# add executory permissin to file
 chmod u+x $file
 
 # git actions
-read -p "Write commit message: " message
+read -p "Git message: " message
 git add .
 git commit -m "$message"
 git push
+
