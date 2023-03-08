@@ -8,7 +8,7 @@ echo "#!/bin/bash" > $file
 
 # write code line into file
 read -p "Write code line: " code_line
-echo $code_line >> $file
+echo "$code_line" >> $file
 
 # add executory permission
 chmod u+x $file
